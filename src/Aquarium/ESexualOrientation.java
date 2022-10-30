@@ -1,5 +1,8 @@
 package Aquarium;
 
-public enum SexualOrientation {
-    enum sexuality 
+public enum ESexualOrientation {
+
+        monoSexue,
+        hermaphroditeByAge,
+        hermaphroditeOpportuniste
 }
