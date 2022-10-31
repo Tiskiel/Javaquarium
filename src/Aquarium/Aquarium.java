@@ -52,27 +52,38 @@ public class Aquarium {
                                                 .map(herbi -> herbi)
                                                     .toList();
 
+        List<Fishs> waitFish = new ArrayList<>();
+
         for (Fishs fish : fishs) {
 
             Fishs bbFish = fish.reproductionFishs(fishs.get(Randoms.rdm(fishs.size())));
 
             if(bbFish != null) {
-                fishs.add(bbFish);
+                waitFish.add(bbFish);
                 System.out.println(bbFish + " est né");
             }
         }
+
+        fishs.addAll(waitFish);
+        waitFish.clear();
+
+        List<Seaweed> waitSeaweed = new ArrayList<>();
 
         for (Seaweed seaweed : seaweeds) {
 
             Seaweed bbSeaweed = seaweed.reproduction();
 
             if (bbSeaweed != null) {
-                seaweeds.add(bbSeaweed);
+                waitSeaweed.add(bbSeaweed);
                 System.out.println(bbSeaweed + " est né");
             }
 
         }
 
+        seaweeds.addAll(waitSeaweed);
+        waitSeaweed.clear();
+
+        List<LivingBeing> waitRemoveList = new ArrayList<>();
 
         for (Fishs carni : carnivorous) {
 
@@ -81,10 +92,12 @@ public class Aquarium {
             carni.eating(fishAttacked);
 
             if (fishAttacked.getPv() <= 0) {
-                fishs.remove(fishAttacked);
+                waitRemoveList.add(fishAttacked);
                 System.out.println(fishAttacked.getName() + " " + "est mort");
             }
         }
+
+
 
         for (Fishs herbi : herbivore) {
 
@@ -94,7 +107,7 @@ public class Aquarium {
             System.out.println(herbi + " " + "mange " + seaweedAttacked);
 
             if (seaweedAttacked.getPv() <= 0){
-                seaweeds.remove(seaweedAttacked);
+                waitRemoveList.add(seaweedAttacked);
                 System.out.println(seaweedAttacked + " " + " a été mangée");
             }
 
@@ -110,15 +123,29 @@ public class Aquarium {
             }
 
             if (livingBeing.getPv() <= 0) {
-                livingBeingsList.remove(livingBeing);
+                waitRemoveList.add(livingBeing);
                 System.out.println(livingBeing + " est mort de quelque chose");
             }
 
             if (livingBeing.getAge() >= 20) {
-                livingBeingsList.remove(livingBeing);
+                waitRemoveList.add(livingBeing);
                 System.out.println(livingBeing + " est mort de viellesse");
             }
         }
+
+        for  (LivingBeing toRemove : waitRemoveList) {
+            if (toRemove instanceof Seaweed) {
+                livingBeingsList.remove(toRemove);
+                seaweeds.remove(toRemove);
+            }
+
+        if (toRemove instanceof Fishs) {
+            livingBeingsList.remove(toRemove);
+            fishs.remove(toRemove);
+        }
+        }
+
+        waitRemoveList.clear();
 
     }
 }
