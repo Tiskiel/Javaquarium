@@ -41,8 +41,8 @@ public class Thon extends Fishs implements ICarnivorous{
         if(!(fish instanceof Thon)) return null;
 
         if((this.getSex() == "M" && fish.getSex() == "F")
-                && (this != fish)
-                && (this.getPv() >= 5)){
+                                            && (this != fish)
+                                                && (this.getPv() >= 5)){
             return new Thon(10, 0, Randoms.rand2() == 1 ? "F" : "M", "bbThon");
         }
         return null;
@@ -50,7 +50,7 @@ public class Thon extends Fishs implements ICarnivorous{
 
     @Override
     public void eating(LivingBeing toBeEat) {
-        if(this == toBeEat || this.getPv() > 5 || toBeEat instanceof Seaweed) return;
+        if(this == toBeEat || this.getPv() > 5 || toBeEat instanceof Seaweed || toBeEat instanceof Thon) return;
 
         toBeEat.setPv(toBeEat.getPv() - 4);
         this.setPv(this.getPv() + 5);

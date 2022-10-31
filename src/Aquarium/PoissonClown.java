@@ -59,7 +59,7 @@ public class PoissonClown extends Fishs implements ICarnivorous{
 
     @Override
     public void eating(LivingBeing toBeEat) {
-        if(this == toBeEat || this.getPv() > 5 || toBeEat instanceof Seaweed) return;
+        if(this == toBeEat || this.getPv() > 5 || toBeEat instanceof Seaweed || toBeEat instanceof PoissonClown) return;
 
         toBeEat.setPv(toBeEat.getPv() - 4);
         this.setPv(this.getPv() + 5);

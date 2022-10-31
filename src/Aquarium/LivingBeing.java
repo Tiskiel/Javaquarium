@@ -1,6 +1,6 @@
 package Aquarium;
 
-public abstract class LivingBeing implements IReproduction {
+public abstract class LivingBeing {
     private int pv = 10;
     private int age = 0;
 
