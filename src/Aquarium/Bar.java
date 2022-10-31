@@ -2,7 +2,7 @@ package Aquarium;
 
 import java.util.Random;
 
-public class Bar extends LivingBeing implements IHerbivore, IReproduction{
+public class Bar extends Fishs implements IHerbivore{
 
     ESexualOrientation sexualOrientation = ESexualOrientation.hermaphroditeByAge;
 
@@ -15,11 +15,6 @@ public class Bar extends LivingBeing implements IHerbivore, IReproduction{
         super(pv, age);
         this.setSexe(sexe);
         this.setName(name);
-    }
-
-    @Override
-    public void eating(LivingBeing toBeEat) {
-
     }
 
     public void setSexe(String sexe) {
@@ -43,12 +38,8 @@ public class Bar extends LivingBeing implements IHerbivore, IReproduction{
         return sexe;
     }
 
-    @Override
-    public LivingBeing reproduction() {
-        return null;
-    }
 
-    public LivingBeing reproduction(IFishs fish) {
+    public Fishs reproductionFishs(Fishs fish) {
         if(this.getAge() >= 10 && this.getSex() == "M"){
             this.setSexe("F");
         }
@@ -56,9 +47,18 @@ public class Bar extends LivingBeing implements IHerbivore, IReproduction{
         if((this.getSex() == "M" && fish.getSex() == "F")
                 && (this != fish)
                     && (this.getPv() >= 5)
-                        && (this.getClass() == fish.getClass())){
-            return new Bar(10, 0, Randoms.rand2() == 1 ? "F" : "M", "bbBar");
+                        && (fish instanceof Bar)){
+            return new Bar(10, 0, "M", "bbBar");
         }
         return null;
+    }
+
+    @Override
+    public void eating(LivingBeing toBeEat) {
+        if(this.getPv() > 5 || !(toBeEat instanceof Seaweed)) return;
+
+        toBeEat.setPv(toBeEat.getPv() - 2);
+        this.setPv(this.getPv() + 3);
+
     }
 }

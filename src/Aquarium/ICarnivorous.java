@@ -1,4 +1,4 @@
 package Aquarium;
 
-public interface ICarnivorous extends IFishs{
+public interface ICarnivorous{
 }

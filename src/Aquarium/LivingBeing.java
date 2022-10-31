@@ -1,6 +1,6 @@
 package Aquarium;
 
-public abstract class LivingBeing {
+public abstract class LivingBeing implements IReproduction {
     private int pv = 10;
     private int age = 0;
 
@@ -24,4 +24,7 @@ public abstract class LivingBeing {
     protected void setAge(int age) {
         this.age = age;
     }
+
+
+
 }

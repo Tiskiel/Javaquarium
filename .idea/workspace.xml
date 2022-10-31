@@ -5,29 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b5531f1-3f28-4593-8370-421541448744" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javaquarium.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/Aquarium.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/Bar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/Carpe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/ESexualOrientation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/ICarnivorous.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/IFishs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/IHerbivore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/IReproduction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/LivingBeing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/Merou.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/PoissonClown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/Randoms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/Seaweed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/Sole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aquarium/Thon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Aquarium/Fishs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/Aquarium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/Aquarium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/Bar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/Bar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/Carpe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/Carpe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/ICarnivorous.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/ICarnivorous.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/IFishs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/IHerbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/IHerbivore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/IReproduction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/LivingBeing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/LivingBeing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/Merou.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/Merou.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/PoissonClown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/PoissonClown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/Randoms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/Randoms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/Seaweed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/Seaweed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/Sole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/Sole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aquarium/Thon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aquarium/Thon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +52,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "copyright"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

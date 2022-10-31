@@ -1,6 +1,6 @@
 package Aquarium;
 
-public class Thon extends LivingBeing implements ICarnivorous, IReproduction{
+public class Thon extends Fishs implements ICarnivorous{
 
     ESexualOrientation sexualOrientation = ESexualOrientation.monoSexue;
 
@@ -11,11 +11,6 @@ public class Thon extends LivingBeing implements ICarnivorous, IReproduction{
         super(pv, age);
         this.setSexe(sexe);
         this.setName(name);
-    }
-
-    @Override
-    public void eating(LivingBeing toBeEat) {
-
     }
 
     public void setSexe(String sexe) {
@@ -39,8 +34,26 @@ public class Thon extends LivingBeing implements ICarnivorous, IReproduction{
         return sexe;
     }
 
-    @Override
-    public LivingBeing reproduction() {
+
+
+    public Fishs reproductionFishs(Fishs fish) {
+
+        if(!(fish instanceof Thon)) return null;
+
+        if((this.getSex() == "M" && fish.getSex() == "F")
+                && (this != fish)
+                && (this.getPv() >= 5)){
+            return new Thon(10, 0, Randoms.rand2() == 1 ? "F" : "M", "bbThon");
+        }
         return null;
+    }
+
+    @Override
+    public void eating(LivingBeing toBeEat) {
+        if(this == toBeEat || this.getPv() > 5 || toBeEat instanceof Seaweed) return;
+
+        toBeEat.setPv(toBeEat.getPv() - 4);
+        this.setPv(this.getPv() + 5);
+
     }
 }

@@ -9,4 +9,8 @@ public abstract class Randoms {
     public static int rand2() {
         return randomized;
     }
+
+    public static int rdm(int randomNumber) {
+        return rdm.nextInt(randomNumber);
+    }
 }
