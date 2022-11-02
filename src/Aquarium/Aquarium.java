@@ -88,8 +88,11 @@ public class Aquarium {
         for (Fishs carni : carnivorous) {
 
             Fishs fishAttacked = fishs.get(Randoms.rdm(fishs.size()));
+
+            if(fishAttacked.getPv() > 0){
             System.out.println(carni + " " + "attaque " + fishAttacked);
             carni.eating(fishAttacked);
+            }
 
             if (fishAttacked.getPv() <= 0) {
                 waitRemoveList.add(fishAttacked);
@@ -103,8 +106,10 @@ public class Aquarium {
 
             Seaweed seaweedAttacked = seaweeds.get(Randoms.rdm(seaweeds.size()));
 
+            if (seaweedAttacked.getPv() > 0){
             herbi.eating(seaweeds.get(Randoms.rdm(seaweeds.size())));
             System.out.println(herbi + " " + "mange " + seaweedAttacked);
+            }
 
             if (seaweedAttacked.getPv() <= 0){
                 waitRemoveList.add(seaweedAttacked);
